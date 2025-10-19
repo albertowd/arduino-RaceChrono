@@ -75,7 +75,7 @@ void RaceChronoBleAgentESP32::startAdvertising() {
   // TODO: Why is this different from the value used for nRF52?
   advertising->setMaxInterval(160);
   advertising->addServiceUUID(_bleService->getUUID());
-  advertising->setScanResponse(false);
+  advertising->enableScanResponse(false);
 
   advertising->start();
 }
